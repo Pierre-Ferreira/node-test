@@ -17,6 +17,20 @@ it('should square a number', () => {
   // }
 })
 
+it('should verify that first and lastname are set', () => {
+  let userObj = {
+    age: 39,
+    sex: 'male',
+    city: 'Pretoria'
+  }
+  let fullName = 'Pierre Ferreira'
+  let res = utils.setName(userObj, fullName)
+  expect(res).toInclude({
+    firstName: 'Pierre',
+    lastName: 'Ferreira'
+  }).toBeA('object')
+})
+
 it('should expect some values', () => {
   // expect(12).toNotBe(11);
   // expect({name: 'Peer'}).toNotEqual({name: 'Peers'})
