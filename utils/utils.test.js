@@ -17,6 +17,13 @@ it('should square a number', () => {
   // }
 })
 
+it('should async add two numbers', (done) => {
+  utils.asyncAdd(4, 5, (sum) => {
+    expect(sum).toBe(9).toBeA('number');
+    done();
+  })
+})
+
 it('should verify that first and lastname are set', () => {
   let userObj = {
     age: 39,
